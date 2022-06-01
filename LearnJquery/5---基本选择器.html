@@ -16,8 +16,10 @@
 	</head>
 	<body>
 		<div id="one">我是id=one的div1111</div>
+		<div id="one">我是id=one的div2222</div>
 		<!-- <div id="one">我是id=one的div2222</div> -->
 		<div class="two">我是class=two的div1111</div>
+		<div class="two">我是class=two的div2222</div>
 		<!-- <div class="two">我是class=two的div2222</div> -->
 		<div>我是没有id,class的div</div>
 		<br>
@@ -28,22 +30,22 @@
 	<script type="text/javascript">
 		function fun1(){
 			//使用id选择器进行定位
-			var one = $("#one");
-			alert(one[0].innerHTML);
+			var jtxt = $("#one");
+			alert(jtxt.html());
 		}
 		function fun2(){
 			//使用类选择器来定位元素
-			var two = $(".two");
-			alert(two[0].innerHTML);
+			var jClass = $(".two");
+			alert(jClass.get(1).innerHTML);
+			
 		}
 		function fun3(){
 			//使用标签选择器定位元素
-			var div = $("div");
-			for(var i=0 ;i<div.length; i++){
-				alert(div[i].innerHTML);
-			}
+			var all = $("div");
+			for (var i = 0; i < all.length; i++) {
+				alert(all[i].innerHTML);
 		}
 		
-		
+	}
 	</script>
 </html>
