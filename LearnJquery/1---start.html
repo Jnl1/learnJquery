@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 导入jQuery的函数库 -->
+		<script src="js/jquery-3.4.1.js"></script>
+		<style type="text/css">
+			.mytxt{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		第一个文本框:<input id="txt"><br>
+		第二个文本框:<input class="mytxt"><br>
+		第三个文本框:<input class="mytxt"><br>
+		<input type="button" onclick="show()" value="提交"/>
+		<input type="button" onclick="show2()" value="提交2"/>
+		
+	</body>
+	<script type="text/javascript">
+		function show(){
+			//使用JavaScript显示文本框中的功能
+			 var txt = document.getElementById("txt"); //定位得到文本框
+			 alert(txt.value);
+			
+			//使用jQuery显示文本框中的功能
+			alert($("#txt").val());
+			
+		}
+		function show2(){
+			//使用JavaScript显示文本框中的功能
+			var txt2 = document.getElementsByClassName("mytxt");//返回的是数组			
+			alert(txt2[1].value);
+			//使用jQuery显示文本框中的功能
+			alert($(".mytxt")[1].value);
+			
+		}
+	</script>
+</html>

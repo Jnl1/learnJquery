@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<!--导入函数库-->
+		<script src="js/jquery-3.4.1.min.js"></script>	
+	</head>
+	<script type="text/javascript">
+		function btnClick(){
+			//先得到dom對象
+			var domBtn = document.getElementById("btn");
+			//轉爲jquery對象
+			var jObj = $(domBtn);
+			alert(jObj.val());
+		}
+	</script>
+	<body>
+		 <input type="button" id="btn" value="==我要成为jQuery对象==" onclick="btnClick()" />
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>		
+		<script src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//在页面加载函数中执行的代码,一定是等待页面加载完毕后才执行
+				$("#btn1").on("click" ,function(){
+					//选择第一个div
+					alert($("div:first").html());
+				});
+				
+				$("#btn2").on("click",function(){
+					//选择最后一个div
+					alert($("div:last").html());
+				});
+				
+				$("#btn3").on("click",function(){
+					alert($("div:eq(3)").html());
+				});
+				
+				$("#btn4").on("click",function(){
+					//选择索引小于3的div
+					$("div:lt(3)").css("background","blue");
+				});
+				
+				$("#btn5").on("click",function(){
+					//选择索引大于3的div
+					$("div:gt(3)").css("background","red");
+				});
+				
+				
+			});
+			
+		</script>
+				
+	</head>
+	<body>
+		<div>我是div-0</div>
+		<div>我是div-1</div>
+		<div>
+			我是第三个div-2
+			<div>我是div-3</div>
+			<div>我是div-4</div>
+		</div>
+		<div>我是div-5</div>
+		<p>功能按钮</p>
+		<input type="button" id="btn1" value="选择第一个div" ><br />
+		<input type="button" id="btn2" value="选择最后一个div"><br />
+		<input type="button" id="btn3" value="选择索引等于3的div"><br />
+		<input type="button" id="btn4" value="选择索引小于3的div"><br />
+		<input type="button" id="btn5" value="选择索引大于3的div"><br />
+      
+	   
+	</body>
+</html>

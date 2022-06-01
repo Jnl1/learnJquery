@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+			<script src="js/jquery-3.4.1.js"></script>
+			<script type="text/javascript">
+				//先写页面加载函数
+				$(function(){
+					$("#btn1").on("click",function(){
+						//设置所有的不可用文本框hello
+						//$(":text:disabled").val("hello");
+						//设置所有的不可用文本框hello
+						$(":text:enabled").val("hahaha....");
+					});
+					$("#btn2").on("click",function(){
+						//"显示被选中复选框的值
+						var cks = $(":checkbox:checked");
+						for(var i =0;i<cks.length;i++){
+							alert(cks[i].value);
+						}
+					});
+					$("#btn3").on("click",function(){
+						//显示被选中下拉列表框的值
+						alert($("select>option:selected")[1].value);
+					});
+					
+					
+					
+					
+					
+				});
+			</script>
+	</head>
+	<body>
+		<p>文本框</p>
+		<input type="text" value="text1"><br>
+		<input type="text" value="text2" disabled="disabled"><br>
+		<input type="text" value="text3"><br>
+		<input type="text" value="text4" disabled><br>
+		<br>
+		<p>复选框</p>
+		<input type="checkbox" name="hobby" value="游泳"/>游泳
+		<input type="checkbox" name="hobby" value="健身" checked="checked"/>健身
+		<input type="checkbox" name="hobby" value="旅游" checked/>旅游
+		<br>
+		<p>下拉列表框</p>
+		<select id="language" >
+			<option value="java" selected="selected">java语言</option>
+			<option value="c">c语言</option>
+			<option value="go" >go语言</option>
+		</select>
+		<p>下拉列表框</p>
+		<select id="language1">
+			<option value="java">java语言</option>
+			<option value="c">c语言</option>
+			<option value="go" selected>go语言</option>
+		</select>
+		<br><br>
+		<input type="button" id="btn1" value="设置所有的不可用文本框hello"><br />
+		<input type="button" id="btn2" value="显示被选中复选框的值"><br />
+		<input type="button" id="btn3" value="显示被选中下拉列表框的值"><br />
+	</body>
+</html>

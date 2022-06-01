@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+			<script src="js/jquery-3.4.1.js"></script>
+		<style type="text/css">
+			div{
+				background-color: gray;
+				width:200px;
+				height: 100px;
+				border: 3px solid orange;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="one">我是id=one的div1111</div>
+		<!-- <div id="one">我是id=one的div2222</div> -->
+		<div class="two">我是class=two的div1111</div>
+		<!-- <div class="two">我是class=two的div2222</div> -->
+		<div>我是没有id,class的div</div>
+		<br>
+		<input type="button" value="选取id=one" onclick="fun1()"><br>
+		<input type="button" value="选取class=two" onclick="fun2()"><br>
+		<input type="button" value="选取全部div" onclick="fun3()"><br>
+	</body>
+	<script type="text/javascript">
+		function fun1(){
+			//使用id选择器进行定位
+			var one = $("#one");
+			alert(one[0].innerHTML);
+		}
+		function fun2(){
+			//使用类选择器来定位元素
+			var two = $(".two");
+			alert(two[0].innerHTML);
+		}
+		function fun3(){
+			//使用标签选择器定位元素
+			var div = $("div");
+			for(var i=0 ;i<div.length; i++){
+				alert(div[i].innerHTML);
+			}
+		}
+		
+		
+	</script>
+</html>
