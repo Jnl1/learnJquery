@@ -8,19 +8,19 @@
 	<script type="text/javascript">
 		function fun1(){
 			//读取text的值
-			alert($(":text")[1].value);
+			alert($(":text").get(1).value);
 		}
 		function fun2(){
 			//读取radio的值
-			var radio = $(":radio");
-			for(var i=0; i<radio.length;i++){
-				alert(radio[i].value);
+			var redio = $(":radio:checked");
+			for (var i = 0; i < redio.length; i++) {
+				alert(redio[i].value);
 			}
-		}
+	    }
 		function fun3(){
-			var cks = $(":checkbox");
-			for(var i=0; i<cks.length;i++){
-				alert(cks[i].value);
+			var checkbox = $(":checkbox:checked");
+			for (var i = 0; i < checkbox.length; i++) {
+				alert(checkbox[i].value);
 			}
 		}
 	</script>
