@@ -6,33 +6,16 @@
 		<script src="js/jquery-3.4.1.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				//在页面加载函数中执行的代码,一定是等待页面加载完毕后才执行
-				$("#btn1").on("click" ,function(){
-					//选择第一个div
-					alert($("div:first").html());
-				});
-				
+				$("#btn1").on("click",function(){
+					alert("ok");
+				})
 				$("#btn2").on("click",function(){
-					//选择最后一个div
-					alert($("div:last").html());
-				});
-				
+					alert("ok2");
+				})
 				$("#btn3").on("click",function(){
-					alert($("div:eq(3)").html());
-				});
-				
-				$("#btn4").on("click",function(){
-					//选择索引小于3的div
-					$("div:lt(3)").css("background","blue");
-				});
-				
-				$("#btn5").on("click",function(){
-					//选择索引大于3的div
-					$("div:gt(3)").css("background","red");
-				});
-				
-				
-			});
+					alert("ok3");
+				})
+			})
 			
 		</script>
 				
